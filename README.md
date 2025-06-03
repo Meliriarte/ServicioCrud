@@ -183,9 +183,9 @@ El proyecto incluye los archivos necesarios para el despliegue automático en Re
 \`\`\`
 CrudServicio/
 │
-├── app.py                 # Aplicación principal Flask
-├── requirements.txt       # Dependencias Python
-├── README.md             # Documentación
-└── templates/
-    └── usuarios.html     # Interfaz web para usuarios
+├── app.py                 <br>
+├── requirements.txt       <br>
+├── README.md              <br>
+└── templates/             <br>
+    └── usuarios.html      <br>
 \`\`\`
