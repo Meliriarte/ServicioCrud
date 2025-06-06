@@ -62,7 +62,7 @@ La aplicación estará disponible en \`http://localhost:5000\`
 
 ### Base URL
 \`\`\`
-https://tu-app.onrender.com
+https://serviciocrud.onrender.com
 \`\`\`
 
 ### Endpoints Disponibles
@@ -144,7 +144,7 @@ https://tu-app.onrender.com
 
 **Crear un usuario**:
 \`\`\`bash
-curl -X POST https://tu-app.onrender.com/usuarios \\
+curl -X POST https://serviciocrud.onrender.com \\
   -H "Content-Type: application/json" \\
   -d '{
     "nombre": "Ana García",
@@ -154,19 +154,19 @@ curl -X POST https://tu-app.onrender.com/usuarios \\
 
 **Obtener un usuario**:
 \`\`\`bash
-curl https://tu-app.onrender.com/usuarios/1
+curl https://serviciocrud.onrender.com/usuarios/1
 \`\`\`
 
 **Actualizar un usuario**:
 \`\`\`bash
-curl -X PUT https://tu-app.onrender.com/usuarios/1 \\
+curl -X PUT https://serviciocrud.onrender.com/usuarios/1 \\
   -H "Content-Type: application/json" \\
   -d '{"edad": 26}'
 \`\`\`
 
 **Eliminar un usuario**:
 \`\`\`bash
-curl -X DELETE https://tu-app.onrender.com/usuarios/1
+curl -X DELETE https://serviciocrud.onrender.com/usuarios/1
 \`\`\`
 
 ### Usando Python
@@ -177,7 +177,7 @@ import requests
 ---
 
 # URL base de tu API
-BASE_URL = "https://tu-app.onrender.com"
+BASE_URL = "https://serviciocrud.onrender.com"
 
 ---
 
