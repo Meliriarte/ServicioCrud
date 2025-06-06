@@ -289,35 +289,6 @@ def index():
                 </tbody>
             </table>
         </div>
-
-        <div class="api-info">
-            <h3 class="api-title">
-                <i class="fas fa-code"></i>
-                Endpoints de la API
-            </h3>
-            <div class="api-endpoints">
-                <div class="endpoint">
-                    <div class="endpoint-method">POST</div>
-                    <div class="endpoint-path">/usuarios</div>
-                </div>
-                <div class="endpoint">
-                    <div class="endpoint-method">GET</div>
-                    <div class="endpoint-path">/usuarios</div>
-                </div>
-                <div class="endpoint">
-                    <div class="endpoint-method">GET</div>
-                    <div class="endpoint-path">/usuarios/&lt;id&gt;</div>
-                </div>
-                <div class="endpoint">
-                    <div class="endpoint-method">PUT</div>
-                    <div class="endpoint-path">/usuarios/&lt;id&gt;</div>
-                </div>
-                <div class="endpoint">
-                    <div class="endpoint-method">DELETE</div>
-                    <div class="endpoint-path">/usuarios/&lt;id&gt;</div>
-                </div>
-            </div>
-        </div>
     </div>
 </body>
 </html>
