@@ -1,6 +1,14 @@
 # CrudServicio 🚀
 
-Una API REST completa para la gestión de usuarios desarrollada con Flask. Este proyecto implementa todas las operaciones CRUD (Create, Read, Update, Delete).
+Una API REST completa para la gestión de usuarios desarrollada con Flask. Este proyecto implementa todas las operaciones CRUD (Create, Read, Update, Delete) con una interfaz web moderna y atractiva.
+
+---
+
+## 🌟 Características
+
+- ✅ **API REST completa** con operaciones CRUD
+- 🔄 **Operaciones en tiempo real**
+- 🎯 **Fácil de usar y desplegar**
 
 ---
 
@@ -22,11 +30,39 @@ Una API REST completa para la gestión de usuarios desarrollada con Flask. Este 
 
 ---
 
+## 🚀 Instalación y Configuración
+
+### 1. Clonar el repositorio
+\`\`\`bash
+git clone <url-del-repositorio>
+cd CrudServicio
+\`\`\`
+
+### 2. Crear entorno virtual
+\`\`\`bash
+python -m venv venv
+source venv/bin/activate  # En Windows: venv\\Scripts\\activate
+\`\`\`
+
+### 3. Instalar dependencias
+\`\`\`bash
+pip install -r requirements.txt
+\`\`\`
+
+### 4. Ejecutar la aplicación
+\`\`\`bash
+python app.py
+\`\`\`
+
+La aplicación estará disponible en \`http://localhost:5000\`
+
+---
+
 ## 📚 Documentación de la API
 
 ### Base URL
 \`\`\`
-https://serviciocrud.onrender.com
+https://tu-app.onrender.com
 \`\`\`
 
 ### Endpoints Disponibles
@@ -40,9 +76,7 @@ https://serviciocrud.onrender.com
 \`\`\`json
 {
   "nombre": "Juan Pérez",
-  "email": "juan@email.com",
-  "edad": 30,
-  "ciudad": "Madrid"
+  "edad": 30
 }
 \`\`\`
 
@@ -53,7 +87,7 @@ https://serviciocrud.onrender.com
   "Usuario": {
     "id": 1,
     "nombre": "Juan Pérez",
-    "edad": 30,
+    "edad": 30
   }
 }
 \`\`\`
@@ -73,7 +107,7 @@ https://serviciocrud.onrender.com
   "Usuario": {
     "id": 1,
     "nombre": "Juan Pérez",
-    "edad": 30,
+    "edad": 30
   }
 }
 \`\`\`
@@ -110,29 +144,29 @@ https://serviciocrud.onrender.com
 
 **Crear un usuario**:
 \`\`\`bash
-curl -X POST https://serviciocrud.onrender.com/usuarios \\
+curl -X POST https://tu-app.onrender.com/usuarios \\
   -H "Content-Type: application/json" \\
   -d '{
     "nombre": "Ana García",
-    "edad": 25,
+    "edad": 25
   }'
 \`\`\`
 
 **Obtener un usuario**:
 \`\`\`bash
-curl https://serviciocrud.onrender.com/usuarios/1
+curl https://tu-app.onrender.com/usuarios/1
 \`\`\`
 
 **Actualizar un usuario**:
 \`\`\`bash
-curl -X PUT https://serviciocrud.onrender.com/usuarios/1 \\
+curl -X PUT https://tu-app.onrender.com/usuarios/1 \\
   -H "Content-Type: application/json" \\
   -d '{"edad": 26}'
 \`\`\`
 
 **Eliminar un usuario**:
 \`\`\`bash
-curl -X DELETE https://serviciocrud.onrender.com/usuarios/1
+curl -X DELETE https://tu-app.onrender.com/usuarios/1
 \`\`\`
 
 ### Usando Python
@@ -140,17 +174,23 @@ curl -X DELETE https://serviciocrud.onrender.com/usuarios/1
 \`\`\`python
 import requests
 
+---
+
 # URL base de tu API
-BASE_URL = "https://serviciocrud.onrender.com"
+BASE_URL = "https://tu-app.onrender.com"
+
+---
 
 # Crear usuario
 nuevo_usuario = {
     "nombre": "Carlos López",
-    "edad": 28,
+    "edad": 28
 }
 
 response = requests.post(f"{BASE_URL}/usuarios", json=nuevo_usuario)
 print(response.json())
+
+---
 
 # Obtener usuario
 user_id = 1
@@ -160,32 +200,14 @@ print(response.json())
 
 ---
 
-## 🌐 Despliegue en Render
-
-### Configuración automática
-El proyecto incluye los archivos necesarios para el despliegue automático en Render:
-
-- \`requirements.txt\`: Dependencias de Python
-- \`app.py\`: Aplicación principal
-
-### Pasos para desplegar:
-
-1. **Conectar repositorio** a Render
-2. **Configurar el servicio**:
-   - Build Command: \`pip install -r requirements.txt\`
-   - Start Command: \`gunicorn app:app\`
-3. **Desplegar** automáticamente
-
----
-
-## 📁 Estructura del Proyecto
+# 📁 Estructura del Proyecto
 
 \`\`\`
-CrudServicio/
-│
-├── app.py                 <br>
-├── requirements.txt       <br>
-├── README.md              <br>
-└── templates/             <br>
-    └── usuarios.html      <br>
+CrudServicio/           <br> 
+│                       <br>
+├── app.py              <br>
+├── requirements.txt    <br>
+├── README.md           <br>
+└── templates/          <br>
+    └── usuarios.html   <br>  
 \`\`\`

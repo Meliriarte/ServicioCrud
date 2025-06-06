@@ -79,6 +79,7 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            min-height: 180px;
         }
 
         .user-card:hover {
@@ -249,13 +250,65 @@
                 grid-template-columns: 1fr;
             }
         }
+
+.age-badge {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.user-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 180px;
+}
+
+.user-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.summary-item {
+    text-align: center;
+}
+
+.summary-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.summary-label {
+    font-size: 0.8rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1><i class="fas fa-users"></i> CrudServicio</h1>
-            <p>Sistema de Gestión de Usuarios</p>
+            {% if mostrar_bienvenida %}
+                <h1><i class="fas fa-home"></i> ¡Bienvenidos a mi primera aplicación Flask!</h1>
+                <p>Sistema de Gestión de Usuarios</p>
+            {% else %}
+                <h1><i class="fas fa-users"></i> CrudServicio</h1>
+                <p>Sistema de Gestión de Usuarios</p>
+            {% endif %}
         </div>
 
         <div class="stats-card">
@@ -282,15 +335,16 @@
                     </div>
                     
                     <div class="user-details">
-                        {% for key, value in usuario.items() %}
-                            {% if key != 'id' %}
-                            <div class="detail-item">
-                                <i class="detail-icon fas fa-{% if key == 'email' %}envelope{% elif key == 'telefono' or key == 'phone' %}phone{% elif key == 'edad' or key == 'age' %}calendar{% elif key == 'ciudad' or key == 'city' %}map-marker-alt{% else %}info-circle{% endif %}"></i>
-                                <span class="detail-label">{{ key.title() }}:</span>
-                                <span class="detail-value">{{ value }}</span>
-                            </div>
-                            {% endif %}
-                        {% endfor %}
+                        <div class="detail-item">
+                            <i class="detail-icon fas fa-user"></i>
+                            <span class="detail-label">Nombre:</span>
+                            <span class="detail-value">{{ usuario.nombre }}</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="detail-icon fas fa-calendar"></i>
+                            <span class="detail-label">Edad:</span>
+                            <span class="detail-value age-badge">{{ usuario.edad }} años</span>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}

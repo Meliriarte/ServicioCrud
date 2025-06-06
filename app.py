@@ -33,7 +33,7 @@ usuarios = [
 
 @app.route('/')
 def index():
-    return render_template('usuarios.html', usuarios=usuarios)
+    return render_template('usuarios.html', usuarios=usuarios, mostrar_bienvenida=True)
 
 @app.route('/usuarios', methods=['POST'])
 def Crear_usuario():
@@ -44,7 +44,7 @@ def Crear_usuario():
 
 @app.route('/usuarios', methods=['GET'])
 def Obtener_usuarios():
-    return render_template('usuarios.html', usuarios=usuarios)
+    return render_template('usuarios.html', usuarios=usuarios, mostrar_bienvenida=False)
 
 @app.route('/usuarios/<int:id>', methods=['GET'])
 def Obtener_usuario(id):
