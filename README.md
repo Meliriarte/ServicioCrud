@@ -1,4 +1,4 @@
-# CrudServicio 🚀
+# CrudServicio 
 
 Una API REST completa para la gestión de usuarios desarrollada con Flask. Este proyecto implementa todas las operaciones CRUD (Create, Read, Update, Delete) con una interfaz web moderna y atractiva.
 
@@ -12,7 +12,7 @@ Una API REST completa para la gestión de usuarios desarrollada con Flask. Este 
 
 ---
 
-## 🛠Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Backend**: Flask 3.0.3
 - **Frontend**: HTML5, CSS3, JavaScript
