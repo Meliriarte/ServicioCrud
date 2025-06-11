@@ -4,15 +4,15 @@ Una API REST completa para la gestión de usuarios desarrollada con Flask. Este 
 
 ---
 
-## 🌟 Características
+## Características
 
-- ✅ **API REST completa** con operaciones CRUD
-- 🔄 **Operaciones en tiempo real**
-- 🎯 **Fácil de usar y desplegar**
+- **API REST completa** con operaciones CRUD
+- **Operaciones en tiempo real**
+- **Fácil de usar y desplegar**
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠Tecnologías Utilizadas
 
 - **Backend**: Flask 3.0.3
 - **Frontend**: HTML5, CSS3, JavaScript
@@ -21,7 +21,7 @@ Una API REST completa para la gestión de usuarios desarrollada con Flask. Este 
 
 ---
 
-## 📋 Requisitos
+## Requisitos
 
 - Python 3.8+
 - Flask 3.0.3
@@ -30,7 +30,7 @@ Una API REST completa para la gestión de usuarios desarrollada con Flask. Este 
 
 ---
 
-## 🚀 Instalación y Configuración
+## Instalación y Configuración
 
 ### 1. Clonar el repositorio
 \`\`\`bash
@@ -58,7 +58,7 @@ La aplicación estará disponible en \`http://localhost:5000\`
 
 ---
 
-## 📚 Documentación de la API
+## Documentación de la API
 
 ### Base URL
 \`\`\`
@@ -200,7 +200,7 @@ print(response.json())
 
 ---
 
-# 📁 Estructura del Proyecto
+# Estructura del Proyecto
 
 \`\`\`
 CrudServicio/           <br> 
